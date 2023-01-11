@@ -97,11 +97,18 @@
         </p>
       </div></LimitWidth
     >
+  </div>
 
-    <div class="center" style="margin-left: 10%">
+  <!-- <div class="row">
+    <div class="col center" style="margin-left: 10%">
       >
       <CountryEventsChart />
     </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-8"><CountryEventsChart /></div>
+    <div class="col-4"><TypesPieChart /></div>
   </div>
 </template>
 
@@ -109,13 +116,16 @@
 import { ref } from "vue";
 import GlobalEvents from "../maps/GlobalEvents.vue";
 import CountryEventsChart from "../charts/CountriesEvents.vue";
+import TypesPieChart from "../charts/TypesDistribution.vue";
 import LimitWidth from "../utils/LimitWidth.vue";
+
 export default {
   name: "GlobalSituation",
   components: {
     GlobalEvents,
     CountryEventsChart,
     LimitWidth,
+    TypesPieChart,
   },
   data() {
     return {
