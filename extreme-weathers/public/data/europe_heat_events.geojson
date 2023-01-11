@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "europe_heat_events",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "geo_point_": "(2:42.79578239851077,12.07174297035682)", "iso3": "ITA", "name": "Italy", "heat_events": 4 }, "geometry": { "type": "Point", "coordinates": [ 12.071742970356832, 42.795782398510788 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:41.59968231227711,21.69747626732901)", "iso3": "MKD", "name": "The former Yugoslav Republic of Macedonia", "heat_events": 2 }, "geometry": { "type": "Point", "coordinates": [ 21.697476267328991, 41.599682312277054 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:48.70753128946244,19.49165388227612)", "iso3": "SVK", "name": "Slovakia", "heat_events": 1 }, "geometry": { "type": "Point", "coordinates": [ 19.491653882276136, 48.707531289462423 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:52.24926328962548,5.60341802694662)", "iso3": "NLD", "name": "Netherlands", "heat_events": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.603418026946611, 52.249263289625446 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:45.84361473342855,24.96925875927501)", "iso3": "ROU", "name": "Romania", "heat_events": 4 }, "geometry": { "type": "Point", "coordinates": [ 24.969258759275029, 45.843614733428637 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:46.56450205398794,2.551955216777795)", "iso3": "FRA", "name": "France", "heat_events": 5 }, "geometry": { "type": "Point", "coordinates": [ 2.551955216777796, 46.564502053987923 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:44.03149841861642,20.80527172323537)", "iso3": "SRB", "name": "Serbia", "heat_events": 1 }, "geometry": { "type": "Point", "coordinates": [ 20.805271723235375, 44.031498418616394 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:39.69190982231608,-7.962187190752771)", "iso3": "PRT", "name": "Portugal", "heat_events": 2 }, "geometry": { "type": "Point", "coordinates": [ -7.962187190752774, 39.691909822316035 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:47.16650222537329,19.41344796118307)", "iso3": "HUN", "name": "Hungary", "heat_events": 1 }, "geometry": { "type": "Point", "coordinates": [ 19.413447961183078, 47.166502225373321 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:54.15534972029968,-2.895584700506364)", "iso3": "GBR", "name": "U.K. of Great Britain and Northern Ireland", "heat_events": 1 }, "geometry": { "type": "Point", "coordinates": [ -1.726954049310246, 53.293370575449622 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:39.06853720123024,22.95974634066734)", "iso3": "GRC", "name": "Greece", "heat_events": 3 }, "geometry": { "type": "Point", "coordinates": [ 22.959746340667394, 39.068537201230292 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:42.76137671439203,25.23150624402954)", "iso3": "BGR", "name": "Bulgaria", "heat_events": 2 }, "geometry": { "type": "Point", "coordinates": [ 25.231506244029507, 42.761376714392078 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:40.22682992875568,-3.649564960428925)", "iso3": "ESP", "name": "Spain", "heat_events": 4 }, "geometry": { "type": "Point", "coordinates": [ -3.649564960428957, 40.226829928755699 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:51.10659218573438,10.39366155475281)", "iso3": "DEU", "name": "Germany", "heat_events": 1 }, "geometry": { "type": "Point", "coordinates": [ 10.393661554752802, 51.106592185734328 ] } },
+{ "type": "Feature", "properties": { "geo_point_": "(2:50.64285116363036,4.663989187136792)", "iso3": "BEL", "name": "Belgium", "heat_events": 1 }, "geometry": { "type": "Point", "coordinates": [ 4.663989187136801, 50.642851163630347 ] } }
+]
+}
