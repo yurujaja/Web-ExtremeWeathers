@@ -1,9 +1,93 @@
 <template>
-  <div class="row items-center" style="margin: 2%">
-    <div class=".col-8"><HeatEuropeMap /></div>
-    <div class=".col-4"><TemperatureGauge /></div>
+  <div>
+    <LimitWidth
+      ><div class="text-body1">
+        <br />
+        <p>
+          "Europe presents a live picture of a warming world and reminds us that
+          even well prepared societies are not safe from impacts of extreme
+          weather events", WMO secretary-general Petteri Taalas said
+          <a
+            href="https://library.wmo.int/index.php?lvl=notice_display&id=22152#.Y773dHbMLGK"
+            >in a statement</a
+          >.
+        </p>
+        <q-space></q-space>
+        <p>
+          From 1991 to 2021, temperatures over Europe warmed at an average of
+          0.5 degrees Celsius per decade, while the global average was just 0.2
+          degrees Celsius, according to the
+          <a
+            href="https://library.wmo.int/index.php?lvl=notice_display&id=22152#.Y773dHbMLGK"
+            >report</a
+          >. It found that Alpine glaciers lost 30 metres in ice thickness
+          between 1997 and 2021, while the Greenland ice sheet is melting
+          quickly and contributing to accelerating sea level rise. Some
+          scientists are calling Europe a "heatwave hotspot" as the number of
+          extreme temperature events on the continent increases faster than in
+          other regions due to changes in atmospheric circulation.
+        </p>
+        <q-space></q-space>
+        <p>
+          The map below shows the countries that experience temperatures
+          creeping over 40 degreees Celsius in Europe from 1980 to 2022, and
+          much of western Europe are affected most. The temperature gauge
+          indicate the average temperatures of July in Paris since the 21st
+          century.
+        </p>
+      </div></LimitWidth
+    >
   </div>
-  <q-img src="images/Wildfires_in_southwest_France.gif" width="40%"></q-img>
+
+  <div class="row items-center" style="margin-left: 2%">
+    <div class="col"><HeatEuropeMap /></div>
+    <div class="col">
+      <TemperatureGauge />
+    </div>
+  </div>
+  <q-space class="q-ma-sm" />
+  <q-space class="q-ma-sm" />
+  <div class="row items-center q-pa-md" style="margin: 2%">
+    <div class="col-4">
+      <q-img
+        src="images/Wildfires_in_southwest_France.gif"
+        width="110%"
+      ></q-img>
+    </div>
+
+    <div class="col-6">
+      <div class="text-body1" style="margin-left: 15%; width: 110%">
+        <p style="text-align: center; font-size: 120%">
+          <strong>Why is Europe so impacted?</strong>
+        </p>
+        <br />
+        <p>
+          The reason Europe is warming faster than elsewhere has to do with the
+          fact that a large part of the continent is in the
+          <strong>sub-Arctic and Arctic</strong>.The WMO divides the world into
+          six regions, with "Europe" comprising 50 countries and half of the
+          Arctic, the fastest warming place on Earth.
+        </p>
+        <q-space></q-space>
+        <p>
+          Scientists also say Europe is impacted by
+          <strong>climate feedbacks</strong>, which exacerbate existing
+          phenomena. For example, fewer clouds over Europe during the summer has
+          meant more sun and heat hits the earth, heating it even more.
+          Additionally, Europe is particularly vulnerable to heat, with its
+          <strong>dense urbanisation</strong> and ageing population.
+        </p>
+        <q-space></q-space>
+        <p>
+          The left visual shows fires and burn scars near the town of Cazaux in
+          the southern Gironde region in France.The animation comprises images
+          acquired on 12 July before the fires broke out and images acquired on
+          17 July when the fires were active. The difference is clear to see.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <div>
     <LossEuropeMap />
   </div>
@@ -14,12 +98,15 @@ import { ref } from "vue";
 import HeatEuropeMap from "../maps/HeatEurope.vue";
 import TemperatureGauge from "../charts/TemperatureGauge.vue";
 import LossEuropeMap from "../maps/LossesEurope.vue";
+import LimitWidth from "../utils/LimitWidth.vue";
+
 export default {
   name: "EuropeanSituation",
   components: {
     HeatEuropeMap,
     TemperatureGauge,
     LossEuropeMap,
+    LimitWidth,
   },
   setup() {},
 };

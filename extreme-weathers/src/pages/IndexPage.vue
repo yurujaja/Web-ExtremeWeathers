@@ -9,12 +9,12 @@
     />
     <GlobalSituation />
     <SessionBanner
-      img-url="images/banner1.png"
-      title="Heatweaves in Europe"
+      img-url="images/banner2.jpg"
+      title="Heatwaves in Europe"
       subtitle=""
     />
     <EuropeanSituation />
-    <SessionBanner img-url="images/banner1.png" title="Outlook " subtitle="" />
+    <SessionBanner img-url="images/banner3.jpg" title="Outlook " subtitle="" />
     <OutlookSession />
   </div>
 </template>

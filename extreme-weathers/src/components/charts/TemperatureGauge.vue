@@ -1,5 +1,15 @@
 <template>
-  <div ref="gauge" style="height: 450%; width: 450%; padding-left: 5%"></div>
+  <div class="text-body1" style="margin-left: 15%; text-align: center">
+    Historical Average Temperatures of July in Paris
+  </div>
+
+  <div ref="gauge" style="height: 500%; margin-left: 15%"></div>
+  <div
+    class="text-body1"
+    style="margin-left: 15%; margin-top: -10%; text-align: center"
+  >
+    Year: {{ current_year }}
+  </div>
 </template>
 
 <script>
@@ -7,6 +17,11 @@ import * as echarts from "echarts";
 export default {
   name: "TemperatureGauge",
   components: {},
+  data() {
+    return {
+      current_year: "2002",
+    };
+  },
   setup() {
     return {};
   },
@@ -78,7 +93,7 @@ export default {
           },
           data: [
             {
-              value: 20,
+              value: 21.71,
             },
           ],
         },
@@ -116,33 +131,41 @@ export default {
           },
           data: [
             {
-              value: 20,
+              value: 21.71,
             },
           ],
         },
       ],
     };
+    var curTempIndex = -1;
+    const tempArrayJuly = [21.71, 26.21, 26.57, 29.57, 30.86];
+    const yearsArray = ["2000", "2005", "2010", "2015", "2022"];
     setInterval(function () {
-      const random = +(Math.random() * 60).toFixed(2);
+      ++curTempIndex;
+      if (curTempIndex >= tempArrayJuly.length) {
+        curTempIndex = 0;
+      }
+      this.current_year = yearsArray[curTempIndex];
       myChart.setOption({
         series: [
           {
             data: [
               {
-                value: random,
+                value: tempArrayJuly[curTempIndex],
               },
             ],
           },
           {
             data: [
               {
-                value: random,
+                value: tempArrayJuly[curTempIndex],
               },
             ],
           },
         ],
       });
-    }, 2000);
+    }, 1500);
+
     myChart.setOption(option);
   },
 };

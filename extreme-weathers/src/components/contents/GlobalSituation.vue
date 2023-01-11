@@ -22,7 +22,7 @@
     <div class="col">
       <div style="margin-top: 15%; margin-left: 0%; margin-right: 15%">
         <strong class="text-primary" style="font-size: 300%">
-          Extreme Weather Events: Global Explorer</strong
+          Extreme Weather Events: <br />Global Explorer</strong
         >
         <div class="text-body1">
           <p>
@@ -90,10 +90,16 @@
       ><div class="text-body1">
         <p>
           <br />
-          Regarding the number of occurred extreme weather events, the most
-          affected countries around the world are
+          Over the last 20 years, the world has witnessed the frequency of
+          occurred extreme events increasing dramatically. Among the above
+          mentioned types of extreme weather events, storms and floods account
+          for a large proportion. Regarding the number of occurred extreme
+          weather events, the most affected countries around the world are
           <strong>The United States of America</strong>,
           <strong>China</strong> and <strong>India</strong> .
+          <br />
+          The charts below illustrate the distribution of the types of different
+          extremes that occurred from 2002-2022 in these countries.
         </p>
       </div></LimitWidth
     >
@@ -123,8 +129,8 @@ export default {
   name: "GlobalSituation",
   components: {
     GlobalEvents,
-    CountryEventsChart,
     LimitWidth,
+    CountryEventsChart,
     TypesPieChart,
   },
   data() {

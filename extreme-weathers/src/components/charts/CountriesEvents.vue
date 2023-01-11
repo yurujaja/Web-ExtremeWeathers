@@ -19,7 +19,7 @@ export default {
     var ROOT_PATH = "https://echarts.apache.org/examples";
     const weatherIcons = {
       Wildfires: "images/wildfire-icon.png",
-      Heatweaves: "images/heat-icon.png",
+      heatwaves: "images/heat-icon.png",
       Storms: ROOT_PATH + "/data/asset/img/weather/showers_128.png",
       Floods: "images/floods-icon.png",
     };
@@ -59,7 +59,7 @@ export default {
       yAxis: {
         type: "category",
         inverse: true,
-        data: ["Storms", "Floods", "Wildfires", "Heatweaves"],
+        data: ["Storms", "Floods", "Wildfires", "heatwaves"],
         axisLabel: {
           formatter: function (value) {
             return "{" + value + "| }\n{value|" + value + "}";
@@ -84,11 +84,11 @@ export default {
                 image: weatherIcons.Storms,
               },
             },
-            Heatweaves: {
+            heatwaves: {
               height: 40,
               align: "center",
               backgroundColor: {
-                image: weatherIcons.Heatweaves,
+                image: weatherIcons.heatwaves,
               },
             },
             Floods: {
