@@ -1,7 +1,7 @@
 <template>
   <LimitWidth
     ><div>
-      <h4><p>What Are Extreme Events?</p></h4>
+      <h4><p>What Are Extreme Weather Events?</p></h4>
       <div class="text-body1">
         <p>
           Extreme weather refers to unusual or severe weather events that are

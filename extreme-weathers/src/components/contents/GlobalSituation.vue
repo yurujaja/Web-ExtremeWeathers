@@ -1,10 +1,11 @@
 <template>
-  <div class="row q-pa-md">
-    <div class="col">
+  <div class="row q-pa-md" style="margin-top: 3%">
+    <div class="col" style="margin: 0 auto">
       <GlobalEvents
         ref="mapViewer"
         class="flex flex-center"
         :current_phase="current_phase"
+        @numEvents="getNum"
       />
       <!-- <div class="row q-pl-xl q-mt-xm justify-center"> -->
       <div class="col-12 col-md-10">
@@ -20,7 +21,7 @@
     </div>
 
     <div class="col">
-      <div style="margin-top: 10%; margin-left: 0%; margin-right: 15%">
+      <div style="margin: 0 auto">
         <strong class="text-primary" style="font-size: 300%">
           Extreme Weather Events: <br />Global Explorer</strong
         >
@@ -80,7 +81,7 @@
         <q-space></q-space>
         <div>
           <strong class="text-primary" style="font-size: 220%">
-            {{ current_phase }}</strong
+            {{ num_events }}</strong
           >
         </div>
       </div>
@@ -118,6 +119,71 @@
   <div class="row">
     <div class="col-8"><CountryEventsChart /></div>
     <div class="col-4"><TypesPieChart /></div>
+  </div>
+
+  <div>
+    <h4><p>Extreme Weathers and Climate Change</p></h4>
+    <div class="row" style="margin-left: 10%">
+      <div class="col">
+        <div style="margin-top: 2%; margin-left: 0%; margin-right: 5%">
+          <strong class="text-primary" style="font-size: 170%">
+            How climate change affects extreme weather around the world</strong
+          >
+          <div class="text-body1">
+            <p>
+              <br />
+              Many weather and climate extremes happen naturally, even without
+              climate change. But Earth’s changing climate does change where and
+              how often some extreme events take place, and how strong those
+              events are. Scientists have published more than 400 peer-reviewed
+              studies looking at weather extremes around the world, from
+              <a
+                herf="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021GL095496"
+                >wildfires in the US</a
+              >
+              and
+              <a
+                herf="https://www.worldweatherattribution.org/climate-change-made-devastating-early-heat-in-india-and-pakistan-30-times-more-likely/"
+                >heatwaves in India and Pakistan</a
+              >
+              to
+              <a
+                herf="https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.6030"
+                >typhoons in Asia</a
+              >
+              and record-breaking
+              <a
+                href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/asl.1033"
+                >rainfall in the UK</a
+              >. The result is mounting evidence that human activity is raising
+              the risk of some types of extreme weather, especially those linked
+              to heat.<q-space></q-space>
+              <ul>
+                <li>71% of the 504 extreme weather events and trends included in
+              the map were found to be made more likely or more severe by
+              human-caused climate change. </li><q-space></q-space>
+              <li>9% of events
+              or trends were made less likely or less severe by climate change,
+              meaning 80% of all events experienced some human impact. The
+              remaining 20% of events and trends showed no discernible human
+              influence or were inconclusive. </li><q-space></q-space>
+              <li>Of the 152 extreme heat events that have been assessed by
+              scientists, 93% found that climate change made the event or trend
+              more likely or more severe. </li><q-space></q-space>
+              <li>For the 126 rainfall or flooding
+              events studied, 56% found human activity had made the event more
+              likely or more severe. For the 81 drought events studied, it’s
+              68%. </li>
+              </ul>
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <q-img src="images/climate_change.jpg" ></q-img>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -169,6 +235,9 @@ export default {
         this.btn2_activate = true;
         this.btn3_activate = false;
       }
+    },
+    getNum(data) {
+      this.num_events = data;
     },
   },
 };

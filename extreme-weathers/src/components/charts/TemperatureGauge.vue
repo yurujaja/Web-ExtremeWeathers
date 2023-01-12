@@ -140,7 +140,7 @@ export default {
     var curTempIndex = -1;
     const tempArrayJuly = [21.71, 26.21, 26.57, 29.57, 30.86];
     const yearsArray = ["2000", "2005", "2010", "2015", "2022"];
-    setInterval(function () {
+    setInterval(() => {
       ++curTempIndex;
       if (curTempIndex >= tempArrayJuly.length) {
         curTempIndex = 0;

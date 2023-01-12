@@ -1,6 +1,6 @@
 <template>
   <!--  3D Globe Map -->
-  <div id="globeViz" style="margin: -10%; margin-bottom: -16%"></div>
+  <div id="globeViz"></div>
 </template>
 
 <script>
@@ -55,20 +55,20 @@ export default {
       // Show layer
       //const getVal = (feat) => feat.properties[this.dataColumn];
       const transferVal = (feat) => Math.log(Math.abs(feat));
-      console.log(this.phase);
+      // console.log(this.phase);
       const colorScale = d3.scaleSequentialSqrt(d3.interpolateYlOrRd);
-      const current_phase = "Phase3Events";
+      const current_phase = this.current_phase;
       const getVal = (feat) => feat.properties[current_phase];
       //colorScale.domain([0, maxVal]);
       fetch(this.dataFilePath)
         .then((res) => res.json())
         .then((countries) => {
-          // const minVal = Math.min(...countries.features.map(getVal));
-          // const maxVal = Math.max(...countries.features.map(getVal));
+          const minVal = Math.min(...countries.features.map(getVal));
+          const maxVal = Math.max(...countries.features.map(getVal));
           //const maxVal = Math.max(...countries.features.map(getVal));
-          const maxVal = 250;
+          //const maxVal = 250;
           colorScale.domain([0, maxVal]);
-
+          this.$emit("numEvents", { maxVal, minVal });
           // this.positiveColorScale.domain([0, transferVal(maxVal)]);
           // this.negativeColorScale.domain([0, transferVal(-minVal)]);
           this.world
@@ -101,6 +101,10 @@ export default {
   },
   mounted() {
     this.initMap();
+
+    this.$watch("current_phase", () => {
+      this.initMap();
+    });
   },
 };
 </script>

@@ -76,60 +76,79 @@
 
   <q-space class="q-ma-sm" />
   <q-space class="q-ma-sm" />
-  <div style="margin-top: 5%">
+  <div style="margin-top: 5%; margin-bottom: 5%">
     <strong class="text-primary" style="font-size: 250%">
-      What can be done?
+      What Should be Done?
     </strong>
+    <LimitWidth
+      ><div class="text-body1">
+        <p>
+          There is no singular solution to navigating the next wave of
+          challenges. But a focus on proven and tested intervention strategies
+          is imperative. To alleviate the many climatic challenges, cities must
+          design with mitigation and adaptation in mind. Below are a few
+          recommendations that tackle different intervention categories.
+        </p>
+      </div></LimitWidth
+    >
+
     <div class="row justify-center">
       <div class="col-12 col-md-3">
         <div class="title text-center">
           <div class="text-h5 text-bold title-text">
-            Vaccinate and co-operate
+            Building and urban planning
           </div>
         </div>
-        <div class="content text-body2">
-          Increase vaccine production and accelerate vaccination across the
-          world.
-          <q-space class="q-ma-sm" />
-          Reduce barriers to the supply chain of vaccine components and
-          materials.
-          <q-space class="q-ma-sm" />
-          Improve cooperation between countries and expand medical and financial
-          resources to help developing regions.
+        <div class="content">
+          <p>
+            Building orientation , shading canyons , lightreflecting materials ,
+            insulation in building construction
+            <q-space class="q-ma-sm" />
+            Shading trees , green roofs , parks and outdoor vegetation
+            <q-space class="q-ma-sm" />
+            Shaded pathways and outdoor spaces with water features
+            <q-space class="q-ma-sm" />
+            Urban planning regulations to reinforce the above strateqies
+          </p>
         </div>
       </div>
       <div class="col-12 col-md-3">
         <div class="title text-center">
           <div class="text-h5 text-bold title-text">
-            Support people and business
+            Cooling technologies & solutions
           </div>
         </div>
-        <div class="content text-body2">
-          Offer income support for workers in hard-hit sectors. Adapt policies
-          according to economic and health developments to transition from
-          emergency to recovery.
-          <q-space class="q-ma-sm" />
-          Support companies affected by restrictions, preferably through grants
-          and equity rather than debt.
-          <q-space class="q-ma-sm" />
-          Help the low skilled and the vulnerable, improve training schemes and
-          access to the labour market.
+        <div class="content">
+          <p>
+            Low-tech solutions including fans , desert coolersand evaporative
+            technoloaies and natural ventilation use
+            <q-space class="q-ma-sm" />
+            Low-energy use devices with high COPS (Coefficients of Performance )
+            <q-space class="q-ma-sm" />
+            Electricity production and renewable energy systems (PVs)
+            <q-space class="q-ma-sm" />
+            District cooling
+          </p>
         </div>
       </div>
       <div class="col-12 col-md-3">
         <div class="title text-center">
           <div class="text-h5 text-bold title-text">
-            Prepare for a sustainable recovery
+            Legislation & education
           </div>
         </div>
-        <div class="content text-body2">
-          Avoid removing government stimulus funding too early.
-          <q-space class="q-ma-sm" />
-          Invest in healthcare, cleaner infrastructure and digital technology to
-          foster a transition to a more resilient and sustainable economy.
-          <q-space class="q-ma-sm" />
-          Focus on structural reforms that can boost medium-term growth in
-          productivity and employment.
+        <div class="content">
+          <p>
+            Programs in place for vulnerable populations with no access to
+            electricity and means of cooling
+            <q-space class="q-ma-sm" />
+            Risk management on district level
+            <q-space class="q-ma-sm" />
+            Heat mitigation awarness and the provision of cooling centers in
+            urban city centers
+            <q-space class="q-ma-sm" />
+            Local laws and regulations to finance climate-driven retrofits
+          </p>
         </div>
       </div>
     </div>
@@ -137,9 +156,12 @@
 </template>
 
 <script>
+import LimitWidth from "../utils/LimitWidth.vue";
 export default {
   name: "OutlookSession",
-  components: {},
+  components: {
+    LimitWidth,
+  },
 };
 </script>
 
@@ -157,9 +179,12 @@ img {
 }
 .title-text {
   color: white;
+  text-align: center;
 }
 .content {
   margin: 5px;
   padding: 10px;
+  font-size: 125%;
+  text-align: left;
 }
 </style>
