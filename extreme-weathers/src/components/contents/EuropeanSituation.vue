@@ -47,7 +47,8 @@
   </div>
   <q-space class="q-ma-sm" />
   <q-space class="q-ma-sm" />
-  <div class="row items-center q-pa-md" style="margin: 2%">
+
+  <div class="row items-center q-pa-md" style="margin-left: 5%">
     <div class="col-4">
       <q-img
         src="images/Wildfires_in_southwest_France.gif"
@@ -88,7 +89,43 @@
     </div>
   </div>
 
-  <div>
+  <LimitWidth
+    ><div class="text-body1">
+      <br />
+      <p style="text-align: center; font-size: 120%">
+        <strong
+          >Economic losses and fatalities from weather- and climate-related
+          events in Europe</strong
+        >
+      </p>
+      <p>
+        All regions of Europe face economic losses and fatalities from weather
+        and climate extremes every year. To support policy processes on climate
+        change adaptation, data on these losses must be collected and reported
+        across EEA member countries and in a coherent way over decades.
+      </p>
+      <q-space></q-space>
+      <p>
+        Between 1980 and 2020, total economic losses from weather- and
+        climate-related events amounted to EUR
+        <strong>450-520 billion</strong> (in 2020 euros) in the 32 EEA member
+        countries (EEA-32). Between only one quarter and one third of these
+        losses were insured. Based on data from two separate sources (<a
+          href="http://www.risklayer.com/de/service/catdat/"
+          >CATDAT</a
+        >
+        and
+        <a
+          href="https://www.munichre.com/en/solutions/for-industry-clients/natcatservice.html"
+          >NatCatSERVICE</a
+        >
+        ), fatalities during the same period amounted to between
+        <strong> 85,000 and 145,000</strong>.
+      </p>
+      <q-space></q-space>
+      <p></p></div
+  ></LimitWidth>
+  <div style="margin-left: 10%">
     <LossEuropeMap />
   </div>
 </template>

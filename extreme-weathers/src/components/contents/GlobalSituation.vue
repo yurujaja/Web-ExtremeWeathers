@@ -20,7 +20,7 @@
     </div>
 
     <div class="col">
-      <div style="margin-top: 15%; margin-left: 0%; margin-right: 15%">
+      <div style="margin-top: 10%; margin-left: 0%; margin-right: 15%">
         <strong class="text-primary" style="font-size: 300%">
           Extreme Weather Events: <br />Global Explorer</strong
         >
@@ -30,10 +30,12 @@
             Extreme weather events are becoming more and more frequent across
             the world. Globally, events that were previously considered
             1-in-50-year extreme heat events have become about
-            <strong>five times</strong> more likely. <br />The globe shows the
-            number of total extreme events in different time periods. Here the
-            included types of extreme weathers are the above mentioned
-            wildfires, storms, heatwaves and droughts, and floods.
+            <strong>five times</strong> more likely.
+            <q-space></q-space>
+            <br />The globe shows the number of total extreme events in
+            different time periods. Here the included types of extreme weathers
+            are the above mentioned wildfires, storms, heatwaves and droughts,
+            and floods.
           </p>
         </div>
 
@@ -70,13 +72,14 @@
           </div>
         </div>
         <div>
-          <strong class="text-primary" style="font-size: 220%">
+          <br />
+          <strong class="text-primary" style="font-size: 200%">
             Number of Events</strong
           >
         </div>
         <q-space></q-space>
         <div>
-          <strong class="text-primary" style="font-size: 250%">
+          <strong class="text-primary" style="font-size: 220%">
             {{ current_phase }}</strong
           >
         </div>

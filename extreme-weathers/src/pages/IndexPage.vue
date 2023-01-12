@@ -16,6 +16,7 @@
     <EuropeanSituation />
     <SessionBanner img-url="images/banner3.jpg" title="Outlook " subtitle="" />
     <OutlookSession />
+    <SourceSession />
   </div>
 </template>
 
@@ -27,17 +28,18 @@ import SessionBanner from "components/utils/SessionBanner.vue";
 import GlobalSituation from "components/contents/GlobalSituation.vue";
 import EuropeanSituation from "src/components/contents/EuropeanSituation.vue";
 import OutlookSession from "src/components/contents/OutlookSession.vue";
+import SourceSession from "src/components/utils/SourceSession.vue";
 
 export default defineComponent({
   name: "IndexPage",
   components: {
     IntroSession,
     CoverPage,
-    // LimitWidth,
     SessionBanner,
     GlobalSituation,
     EuropeanSituation,
     OutlookSession,
+    SourceSession,
   },
 });
 </script>

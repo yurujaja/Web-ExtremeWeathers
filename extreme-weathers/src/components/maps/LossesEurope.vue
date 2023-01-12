@@ -4,6 +4,16 @@
 
     <div class="map-overlay" id="legend">
       <div class="q-gutter-sm">
+        <p
+          style="
+            text-align: center;
+            font-size: 120%;
+            margin-top: 10%;
+            margin-bottom: -5%;
+          "
+        >
+          <strong>Economic losses and fatalities in EU countries</strong>
+        </p>
         <q-radio
           v-model="loss_type"
           val="lossEuro"
@@ -28,7 +38,6 @@
       </div>
 
       <q-space class="q-ma-sm" />
-      <label id="year">Year: {{ sliderValue }}</label>
     </div>
   </div>
 </template>
@@ -61,8 +70,8 @@ export default {
         "#bf360c",
       ],
       data_steps_dict: {
-        lossEuro: [1000, 4000, 10000, 16000, 30000, 50000, 80000, 100000],
-        fatalities: [20, 50, 100, 200, 500, 1000, 2000, 5000],
+        lossEuro: [1000, 8000, 20000, 30000, 50000, 80000, 90000, 100000],
+        fatalities: [200, 2000, 4000, 6000, 10000, 15000, 25000, 40000],
       },
     };
   },
@@ -79,7 +88,7 @@ export default {
         ` [${data_steps[5]}, ${data_steps[6]})`,
         ` [${data_steps[6]}, ${data_steps[7]})`,
         ` ${data_steps[7]} +`,
-        " No data",
+        // " No data",
       ];
       var colors = this.color_stairs;
       colors.push("white");
@@ -138,7 +147,7 @@ export default {
     var map = new mapboxgl.Map({
       container: "globalMap",
       style: "mapbox://styles/mapbox/light-v11",
-      center: [7, 50],
+      center: [4.5, 52],
       zoom: 3.9,
       maxBounds: bounds, // Sets bounds as max
       projection: "lambertConformalConic",
@@ -177,57 +186,25 @@ export default {
         map.getCanvas().style.cursor = "pointer";
         var popupInfo;
 
-        var _type_text = this.total_or_per_cap;
-        if ("per_capita" === _type_text) {
-          _type_text = "per capita";
-        }
-        var _emission_text = this.emission_type;
-        if ("co2" === _emission_text) {
-          _emission_text = "CO<sub>2</sub>";
-        } else {
-          _emission_text = "GHGs";
-        }
-
-        if (
-          !isNaN(
-            e.features[0].properties[
-              this.emission_type +
-                "_" +
-                this.total_or_per_cap +
-                "_" +
-                this.sliderValue
-            ]
-          )
-        ) {
+        if (this.loss_type == "lossEuro") {
           popupInfo =
             "<strong>" +
             e.features[0].properties.name +
             "</strong> " +
             "<br/>" +
-            _type_text +
-            " " +
-            _emission_text +
-            " emission" +
-            " in " +
-            this.sliderValue +
-            ":" +
-            "<br />" +
-            e.features[0].properties[
-              this.emission_type +
-                "_" +
-                this.total_or_per_cap +
-                "_" +
-                this.sliderValue
-            ].toFixed(3) +
-            " " +
-            this.emission_unit;
+            "Economic losses: " +
+            e.features[0].properties.lossEuro +
+            " million EUR";
         } else {
           popupInfo =
             "<strong>" +
             e.features[0].properties.name +
-            "</strong>" +
-            ": No data";
+            "</strong> " +
+            "<br/>" +
+            "Fatalities: " +
+            e.features[0].properties.fatalities;
         }
+
         popup.setLngLat(e.lngLat).setHTML(popupInfo).addTo(map);
         if (e.features.length > 0) {
           if (hoveredStateId !== null) {
@@ -275,14 +252,14 @@ export default {
 /*Container bottom left*/
 .container {
   position: relative;
-  width: max(1000px, 80vw);
+  width: max(1200px, 100vw);
   height: max(800px, 70vh);
-  margin: 0 auto;
+  margin-left: 0 auto;
 }
 
 #globalMap {
   //   position: absolute;
-  width: 85%;
+  width: 88%;
   //width: 1300px;
   height: 100%;
 }
@@ -299,13 +276,14 @@ export default {
 }
 
 #legend {
-  padding: 10px;
+  padding: 5px;
+  text-align: left;
   //   padding-left: 20px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  line-height: 20px;
+  // line-height: 20px;
   height: 400px;
   //margin-bottom: 0px;
-  width: 250px;
+  width: 270px;
 }
 
 .legend-key {
