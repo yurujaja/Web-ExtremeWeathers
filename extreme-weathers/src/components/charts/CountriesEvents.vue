@@ -29,7 +29,9 @@ export default {
     var option;
     option = {
       title: {
-        text: "",
+        text: "The extreme events occurrence over countries from 2002 to 2022",
+        top: "bottom",
+        left: "center",
       },
       tooltip: {
         trigger: "axis",

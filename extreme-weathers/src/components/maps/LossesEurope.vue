@@ -252,14 +252,14 @@ export default {
 /*Container bottom left*/
 .container {
   position: relative;
-  width: max(1200px, 100vw);
+  width: max(1000px, 90vw);
   height: max(800px, 70vh);
   margin-left: 0 auto;
 }
 
 #globalMap {
   //   position: absolute;
-  width: 88%;
+  width: 100%;
   //width: 1300px;
   height: 100%;
 }

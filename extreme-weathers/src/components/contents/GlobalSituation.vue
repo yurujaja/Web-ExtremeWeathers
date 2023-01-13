@@ -1,28 +1,17 @@
 <template>
   <div class="row q-pa-md" style="margin-top: 3%">
-    <div class="col" style="margin: 0 auto">
+    <div class="col" style="margin-top: -5%; margin-bottom: -5%;" >
       <GlobalEvents
         ref="mapViewer"
         class="flex flex-center"
         :current_phase="current_phase"
         @numEvents="getNum"
       />
-      <!-- <div class="row q-pl-xl q-mt-xm justify-center"> -->
-      <div class="col-12 col-md-10">
-        <a>Legend</a> <br />
-        <span id="positive-bar"></span>
-
-        <br />
-        <span id="negative-text">0</span>
-        <!-- <span id="zero-text">0.0</span> -->
-        <span id="positive-text">460</span>
-      </div>
-      <!-- </div> -->
     </div>
 
-    <div class="col">
-      <div style="margin: 0 auto">
-        <strong class="text-primary" style="font-size: 300%">
+    <div class="col" style="margin: 0 auto; padding-right: 5%; padding-top: 3%;">
+      <div >
+        <strong class="text-primary" style="font-size: 300%; margin: 0 auto">
           Extreme Weather Events: <br />Global Explorer</strong
         >
         <div class="text-body1">
@@ -87,6 +76,19 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col"> <div class="col-12 col-md-10" style="margin-top: -5%;" >
+        <a>Legend</a> <br />
+        <span id="positive-bar"></span>
+
+        <br />
+        <span id="negative-text">0</span>
+        <!-- <span id="zero-text">0.0</span> -->
+        <span id="positive-text">460</span>
+      </div></div>
+    <div class="col"></div>
+  </div>
+
   <q-space class="q-ma-sm" />
   <q-space class="q-ma-sm" />
   <div>
@@ -109,21 +111,15 @@
     >
   </div>
 
-  <!-- <div class="row">
-    <div class="col center" style="margin-left: 10%">
-      >
-      <CountryEventsChart />
-    </div>
-  </div> -->
 
-  <div class="row">
+  <div class="row" style="margin-left:5%; margin-right: 5%">
     <div class="col-8"><CountryEventsChart /></div>
     <div class="col-4"><TypesPieChart /></div>
   </div>
 
   <div>
     <h4><p>Extreme Weathers and Climate Change</p></h4>
-    <div class="row" style="margin-left: 10%">
+    <div class="row" style="margin-left: 10%;height:80%">
       <div class="col">
         <div style="margin-top: 2%; margin-left: 0%; margin-right: 5%">
           <strong class="text-primary" style="font-size: 170%">
@@ -181,7 +177,9 @@
         </div>
       </div>
       <div class="col">
-        <q-img src="images/climate_change.jpg" ></q-img>
+        <q-img src="images/climate_change.jpg"
+         :fit="contain"
+         style="width: 85%"></q-img>
       </div>
     </div>
   </div>

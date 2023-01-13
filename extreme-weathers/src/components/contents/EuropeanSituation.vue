@@ -39,9 +39,9 @@
     >
   </div>
 
-  <div class="row items-center" style="margin-left: 2%">
+  <div class="row items-center" style="margin-left: 5%; margin-right: 3%">
     <div class="col"><HeatEuropeMap /></div>
-    <div class="col">
+    <div class="col" style="">
       <TemperatureGauge />
     </div>
   </div>
@@ -52,7 +52,7 @@
     <div class="col-4">
       <q-img
         src="images/Wildfires_in_southwest_France.gif"
-        width="110%"
+        :fit="contain"
       ></q-img>
     </div>
 
@@ -125,7 +125,7 @@
       <q-space></q-space>
       <p></p></div
   ></LimitWidth>
-  <div style="margin-left: 10%">
+  <div style="margin-left: 5%; margin-right: 5%">
     <LossEuropeMap />
   </div>
 </template>

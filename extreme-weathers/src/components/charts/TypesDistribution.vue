@@ -19,6 +19,11 @@ export default {
 
     var option;
     option = {
+      title: {
+        text: "The distribution of extreme weather types",
+        top: "bottom",
+        left: "center",
+      },
       tooltip: {
         trigger: "item",
       },

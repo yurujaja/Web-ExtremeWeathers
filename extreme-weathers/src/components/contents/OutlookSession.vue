@@ -1,6 +1,6 @@
 <template>
   <div class="row items-center" style="margin-top: 5%">
-    <div class="col">
+    <div class="col" style="margin-left: 5%; margin-right: 5%">
       <div
         class="text-body1"
         style="margin-right: 35%; margin-left: 10%; width: 80%"
@@ -26,19 +26,12 @@
       </div>
     </div>
     <div class="col">
-      <q-img src="images/global_warming_forecast.png" width="100%"></q-img>
-      <div>
-        <!-- <small
-          ><a
-            href="https://cds.climate.copernicus.eu/cdsapp#!/software/app-c3s-global-temperature-trend-monitor?tab=app"
-            >source</a
-          ></small
-        > -->
-      </div>
+      <q-img src="images/global_warming_forecast.png" :fit="contain"></q-img>
+      <div></div>
     </div>
   </div>
-  <div class="row items-center" style="margin-top: 5%">
-    <div class="col">
+  <div class="row items-center" style="margin-top: 2%">
+    <div class="col" style="margin-left: 5%">
       <iframe
         width="800"
         height="550"
@@ -80,6 +73,7 @@
     <strong class="text-primary" style="font-size: 250%">
       What Should be Done?
     </strong>
+    <q-space class="q-ma-sm" />
     <LimitWidth
       ><div class="text-body1">
         <p>
@@ -183,8 +177,8 @@ img {
 }
 .content {
   margin: 5px;
-  padding: 10px;
-  font-size: 125%;
+  padding: 15px;
+  font-size: 145%;
   text-align: left;
 }
 </style>

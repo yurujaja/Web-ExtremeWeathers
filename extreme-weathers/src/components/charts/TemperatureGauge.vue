@@ -1,14 +1,19 @@
 <template>
-  <div class="text-body1" style="margin-left: 15%; text-align: center">
-    Historical Average Temperatures of July in Paris
-  </div>
+  <div class="gauge-text">
+    <div>Historical Average Temperatures of July in Paris</div>
+    <br />
+    <div>Year: {{ current_year }}</div>
 
-  <div ref="gauge" style="height: 500%; margin-left: 15%"></div>
-  <div
-    class="text-body1"
-    style="margin-left: 15%; margin-top: -10%; text-align: center"
-  >
-    Year: {{ current_year }}
+    <div
+      ref="gauge"
+      style="
+        height: 500%;
+        position: relative;
+        margin-right: 4%;
+        /* padding-left: 4%;
+        padding-right: 5%; */
+      "
+    ></div>
   </div>
 </template>
 
@@ -29,6 +34,11 @@ export default {
     var myChart = echarts.init(this.$refs["gauge"]);
     var option;
     option = {
+      // title: {
+      //   text: "Historical Average Temperatures of July in Paris",
+      //   top: "top",
+      //   left: "center",
+      // },
       series: [
         {
           type: "gauge",
@@ -171,4 +181,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.gauge-text {
+  text-align: center;
+  color: #2d4856;
+  font-size: 150%;
+  font-weight: bold;
+  margin-left: 35%;
+}
+</style>

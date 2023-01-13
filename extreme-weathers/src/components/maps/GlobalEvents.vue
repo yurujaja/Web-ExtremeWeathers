@@ -4,7 +4,6 @@
 </template>
 
 <script>
-//import { stringLiteral } from "@babel/types";
 import * as d3 from "d3";
 import Globe from "globe.gl";
 
@@ -32,17 +31,6 @@ export default {
       this.autoRotate(true);
     },
 
-    numberWithCommas(x) {
-      // Format numbers: 1,000,000,000
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    },
-
-    // resizeMap(height, width) {
-    //   // Resize the globe
-    //   this.world.width([width]);
-    //   this.world.height([height]);
-    // },
-
     autoRotate(auto = true) {
       // Add auto-rotation
       this.world.controls().autoRotate = auto;
@@ -53,24 +41,20 @@ export default {
 
     showLayer() {
       // Show layer
-      //const getVal = (feat) => feat.properties[this.dataColumn];
-      const transferVal = (feat) => Math.log(Math.abs(feat));
-      // console.log(this.phase);
-      const colorScale = d3.scaleSequentialSqrt(d3.interpolateYlOrRd);
+      const colorScale = d3.scaleSequentialSymlog(d3.interpolateYlOrRd);
       const current_phase = this.current_phase;
       const getVal = (feat) => feat.properties[current_phase];
+      var sumVal;
       //colorScale.domain([0, maxVal]);
       fetch(this.dataFilePath)
         .then((res) => res.json())
         .then((countries) => {
-          const minVal = Math.min(...countries.features.map(getVal));
-          const maxVal = Math.max(...countries.features.map(getVal));
-          //const maxVal = Math.max(...countries.features.map(getVal));
-          //const maxVal = 250;
+          sumVal = countries.features
+            .map(getVal)
+            .reduce((partialSum, a) => partialSum + a, 0);
+          this.$emit("numEvents", sumVal);
+          const maxVal = 450;
           colorScale.domain([0, maxVal]);
-          this.$emit("numEvents", { maxVal, minVal });
-          // this.positiveColorScale.domain([0, transferVal(maxVal)]);
-          // this.negativeColorScale.domain([0, transferVal(-minVal)]);
           this.world
             .polygonsData(
               countries.features.filter(
