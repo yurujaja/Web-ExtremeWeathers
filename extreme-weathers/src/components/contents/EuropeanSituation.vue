@@ -39,9 +39,9 @@
     >
   </div>
 
-  <div class="row items-center" style="margin-left: 5%; margin-right: 3%">
+  <div class="row items-center" style="margin-left: 4%; margin-right: 3%">
     <div class="col"><HeatEuropeMap /></div>
-    <div class="col" style="">
+    <div class="col">
       <TemperatureGauge />
     </div>
   </div>

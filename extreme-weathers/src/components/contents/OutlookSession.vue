@@ -33,8 +33,8 @@
   <div class="row items-center" style="margin-top: 2%">
     <div class="col" style="margin-left: 5%">
       <iframe
-        width="800"
-        height="550"
+        width="600"
+        height="400"
         src="https://www.youtube.com/embed/5wYFFlSuauQ"
         title="YouTube video player"
         frameborder="0"
@@ -108,9 +108,7 @@
       </div>
       <div class="col-12 col-md-3">
         <div class="title text-center">
-          <div class="text-h5 text-bold title-text">
-            Cooling technologies & solutions
-          </div>
+          <div class="text-h5 text-bold title-text">Cooling technologies</div>
         </div>
         <div class="content">
           <p>
@@ -174,11 +172,12 @@ img {
 .title-text {
   color: white;
   text-align: center;
+  font-size: large;
 }
 .content {
   margin: 5px;
   padding: 15px;
-  font-size: 145%;
+  font-size: 115%;
   text-align: left;
 }
 </style>

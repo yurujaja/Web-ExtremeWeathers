@@ -7,9 +7,11 @@
     <div
       ref="gauge"
       style="
-        height: 500%;
+        height: 350%;
+        /* width: 300%; */
         position: relative;
         margin-right: 4%;
+        margin-left: 4%;
         /* padding-left: 4%;
         padding-right: 5%; */
       "
@@ -96,7 +98,7 @@ export default {
             lineHeight: 40,
             borderRadius: 8,
             offsetCenter: [0, "-15%"],
-            fontSize: 60,
+            fontSize: 45,
             fontWeight: "bolder",
             formatter: "{value} °C",
             color: "inherit",
@@ -185,7 +187,7 @@ export default {
 .gauge-text {
   text-align: center;
   color: #2d4856;
-  font-size: 150%;
+  font-size: 130%;
   font-weight: bold;
   margin-left: 35%;
 }
