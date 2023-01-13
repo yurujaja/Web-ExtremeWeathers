@@ -27,42 +27,37 @@
     id="source"
   >
     <div class="column">
-      <span style="color: white; font-size: 120%">Data Source:</span>
+      <span style="color: white; font-size: 120%">Data Source</span>
       <div class="text-body2">
         <a href="https://osm-boundaries.com">OSM - Administrative Boundaries</a>
       </div>
       <div class="text-body2">
         <a
-          href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions#global-average-temperatures-have-increased-by-more-than-1-c-since-pre-industrial-times"
-          >Our World in Data - Average Temperature Anomaly</a
+          href="https://www.eea.europa.eu/data-and-maps/daviz/economic-damage-caused-by-weather/#tab-chart_2"
+          >European Environment Agency</a
         >
+      </div>
+      <div class="text-body2">
+        <a href="https://public.emdat.be/">EM-DAT Public</a>
+      </div>
+      <div class="text-body2">
+        <a href="https://data.giss.nasa.gov/gistemp/maps/">NASA GISS</a>
       </div>
       <div class="text-body2">
         <a
-          href="https://essd.copernicus.org/articles/14/1917/2022/essd-14-1917-2022.pdf"
-          >Global Carbon Budget 2021</a
+          href="https://www.wunderground.com/history/monthly/fr/paray-vieille-poste/LFPO/date/2017-7"
+          >Weather Underground</a
         >
       </div>
       <div class="text-body2">
-        <a href="https://github.com/owid/co2-data"
-          >Our World in Data - Data on CO2 and Greenhouse Gas Emissions</a
-        >
-      </div>
-      <div class="text-body2">
-        <a href="https://ourworldindata.org/renewable-energy"
-          >Our World in Data - Renewable energy</a
-        >
-      </div>
-      <div class="text-body2">
-        <a
-          href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2019"
-          >Greenhouse gas reporting: conversion factors 2019</a
+        <a href="https://climate.copernicus.eu/"
+          >Copernicus Climate Change Service</a
         >
       </div>
     </div>
     <q-separator vertical inset color="white" />
     <div class="column">
-      <span style="color: white; font-size: 120%">Software:</span>
+      <span style="color: white; font-size: 120%">Software</span>
       <div class="text-body2">
         Data Processing:
         <a href="https://www.python.org">Python</a>,
@@ -77,38 +72,29 @@
       <div class="text-body2">
         Visualization:
         <a href="https://docs.mapbox.com/mapbox-gl-js/api/">Mapbox</a>,
-        <a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a>
+        <a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a>,
+        <a href="https://globe.gl/">Globe GL</a>
       </div>
     </div>
 
     <q-separator vertical inset color="white" />
     <div class="column">
-      <span style="color: white; font-size: 120%">Media: </span>
+      <span style="color: white; font-size: 120%">Media</span>
       <div class="text-body2">
         Images:
         <!--        <a href="https://www.flaticon.com/">Flaticon</a>,-->
-        <a href="https://www.pexels.com/">Pexels</a>,
+        <a href="https://pixabay.com/">Plxabay</a>,
         <a href="https://unsplash.com/">Unsplash</a>,
-        <a href="https://pixabay.com/">Pixabay</a>
       </div>
       <div class="text-body2">
         Icons:
-        <a
-          href="https://www.flaticon.com/free-icons/carbon-neutral"
-          title="https://www.flaticon.com/free-icons/carbon-neutral"
-          >Freepik-Flaticon</a
-        >
+        <a href="https://www.flaticon.com/">Flaticon</a>
       </div>
       <div class="text-body2">
         Videos:
         <a href="https://www.youtube.com">YouTube</a>
       </div>
-      <div class="text-body2">
-        Color:
-        <a href="https://www.materialpalette.com/colors"
-          >Material Design Colors</a
-        >
-      </div>
+
       <!--      <div class="text-body2">-->
       <!--        Videos:-->
       <!--        <a href="https://www.pexels.com/">Pexels</a>,-->
