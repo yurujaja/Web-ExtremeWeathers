@@ -67,13 +67,6 @@ strong
   color: #ff6600
   font-size: 105%
 
-
-.text-body1
-  text-align: left
-  font-size: 150%
-
-
-
 .custom-caption
   text-align: center
   padding: 12px
